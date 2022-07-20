@@ -1,6 +1,5 @@
-package spring_introduction;
+package springintroduction;
 
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Test2 {

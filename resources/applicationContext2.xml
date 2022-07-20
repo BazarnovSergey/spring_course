@@ -7,18 +7,12 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="classpath:myApp.properties"/>
-
-
     <bean id="myPet"
-          class="springintroduction.Dog">
-    </bean>
+          class="springintroduction.Dog"
+          init-method="init"
+          destroy-method="destroy"
+          scope="prototype">
 
-    <bean id="myPerson"
-          class="springintroduction.Person">
-        <property name="pet" ref="myPet"/>
-        <property name="surname" value="${person.surname}"/>
-        <property name="age" value="${person.age}"/>
     </bean>
 
 </beans>

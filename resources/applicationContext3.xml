@@ -7,18 +7,8 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="classpath:myApp.properties"/>
+    <context:component-scan base-package="springintroduction"/>
+    <!--    <context:property-placeholder location="classpath:myApp.properties"/>-->
 
-
-    <bean id="myPet"
-          class="springintroduction.Dog">
-    </bean>
-
-    <bean id="myPerson"
-          class="springintroduction.Person">
-        <property name="pet" ref="myPet"/>
-        <property name="surname" value="${person.surname}"/>
-        <property name="age" value="${person.age}"/>
-    </bean>
 
 </beans>
